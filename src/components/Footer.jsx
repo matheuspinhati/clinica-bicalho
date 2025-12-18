@@ -4,8 +4,6 @@ import {
   MapPin, 
   Clock, 
   Instagram, 
-  Facebook, 
-  Linkedin,
   Heart
 } from 'lucide-react';
 import './Footer.css';
@@ -41,31 +39,13 @@ const Footer = () => {
             </p>
             <div className="footer-social">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/grupoclinicabicalho/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
-              </a>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link"
-                aria-label="Facebook"
-              >
-                <Facebook size={20} />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={20} />
               </a>
             </div>
           </div>
