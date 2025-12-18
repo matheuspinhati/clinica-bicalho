@@ -177,6 +177,24 @@
   }
 }
 
+@media (max-width: 768px) {
+  .header-content {
+    position: relative;
+    justify-content: center;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .header-actions {
+    position: absolute;
+    right: var(--container-padding);
+  }
+}
+
 @media (max-width: 640px) {
   .top-bar-content {
     gap: var(--spacing-4);
