@@ -7,14 +7,8 @@ export default defineConfig({
   
   // Build optimizations
   build: {
-    // Enable minification
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-      },
-    },
+    // Use esbuild for minification (built-in, faster than terser)
+    minify: 'esbuild',
     
     // Code splitting for better caching
     rollupOptions: {
@@ -28,7 +22,7 @@ export default defineConfig({
       },
     },
     
-    // Generate source maps for production debugging
+    // Disable source maps for production
     sourcemap: false,
     
     // Chunk size warning limit (in kBs)
@@ -58,8 +52,9 @@ export default defineConfig({
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react'],
   },
   
-  // Enable gzip compression info
+  // Esbuild options
   esbuild: {
     legalComments: 'none',
+    drop: ['console', 'debugger'],
   },
 })
