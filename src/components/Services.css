@@ -1,0 +1,241 @@
+/* =====================================================
+   SERVICES SECTION - Brand Colors Only
+   ===================================================== */
+
+.services {
+  position: relative;
+  background: linear-gradient(165deg, var(--color-navy) 0%, var(--color-navy-dark) 100%);
+  overflow: hidden;
+}
+
+/* =====================================================
+   BACKGROUND EFFECTS
+   ===================================================== */
+
+.services-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.services-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.35;
+}
+
+.services-glow-1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--color-orange) 0%, transparent 70%);
+  top: -200px;
+  left: -150px;
+}
+
+.services-glow-2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--color-orange-light) 0%, transparent 70%);
+  bottom: -100px;
+  right: -100px;
+}
+
+.services .section-header {
+  position: relative;
+  z-index: 1;
+}
+
+.text-white-muted {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* =====================================================
+   SERVICES GRID - Drag to Scroll
+   ===================================================== */
+
+.services-grid {
+  display: flex;
+  gap: var(--spacing-5);
+  position: relative;
+  z-index: 1;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  user-select: none;
+  
+  /* Hide scrollbar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.services-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.services-grid.dragging {
+  cursor: grabbing;
+  scroll-behavior: auto;
+}
+
+.services-grid > * {
+  flex: 0 0 300px;
+  pointer-events: auto;
+}
+
+.services-grid.dragging > * {
+  pointer-events: none;
+}
+
+/* =====================================================
+   SERVICE CARD
+   ===================================================== */
+
+.service-card {
+  position: relative;
+  background: var(--color-white);
+  padding: var(--spacing-6);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.service-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: var(--color-orange);
+}
+
+/* =====================================================
+   SERVICE TAG
+   ===================================================== */
+
+.service-tag {
+  position: absolute;
+  top: var(--spacing-4);
+  right: var(--spacing-4);
+  background: linear-gradient(135deg, var(--color-orange) 0%, var(--color-orange-light) 100%);
+  color: var(--color-white);
+  font-size: 10px;
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+}
+
+/* =====================================================
+   SERVICE ICON
+   ===================================================== */
+
+.service-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-5);
+  background: rgba(52, 49, 106, 0.08);
+  color: var(--color-navy);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon-wrapper {
+  background: linear-gradient(135deg, var(--color-orange) 0%, var(--color-orange-light) 100%);
+  color: var(--color-white);
+  box-shadow: 0 8px 20px rgba(212, 98, 71, 0.25);
+}
+
+/* =====================================================
+   SERVICE CONTENT
+   ===================================================== */
+
+.service-title {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--color-navy);
+  margin-bottom: var(--spacing-3);
+  line-height: 1.3;
+}
+
+.service-description {
+  font-size: var(--text-sm);
+  color: var(--color-gray-600);
+  line-height: 1.7;
+  flex-grow: 1;
+  margin-bottom: var(--spacing-5);
+}
+
+/* =====================================================
+   SERVICE CTA
+   ===================================================== */
+
+.service-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-orange);
+  padding: 10px 16px;
+  border-radius: var(--radius-full);
+  background: rgba(212, 98, 71, 0.08);
+  transition: all 0.3s ease;
+  margin-top: auto;
+  width: fit-content;
+}
+
+.service-cta svg {
+  transition: transform 0.3s ease;
+}
+
+.service-cta:hover {
+  background: linear-gradient(135deg, var(--color-orange) 0%, var(--color-orange-light) 100%);
+  color: white;
+  box-shadow: 0 8px 20px rgba(212, 98, 71, 0.3);
+}
+
+.service-cta:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 1024px) {
+  .services-grid > * {
+    flex: 0 0 280px;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-grid {
+    gap: var(--spacing-4);
+    margin-left: calc(var(--spacing-4) * -1);
+    margin-right: calc(var(--spacing-4) * -1);
+    padding-left: var(--spacing-4);
+    padding-right: var(--spacing-4);
+  }
+  
+  .services-grid > * {
+    flex: 0 0 260px;
+  }
+  
+  .service-card {
+    padding: var(--spacing-5);
+  }
+  
+  .service-icon-wrapper {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .service-tag {
+    top: var(--spacing-3);
+    right: var(--spacing-3);
+  }
+}

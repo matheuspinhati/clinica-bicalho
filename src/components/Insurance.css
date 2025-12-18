@@ -1,0 +1,138 @@
+/* =====================================================
+   INSURANCE SECTION
+   ===================================================== */
+
+.insurance {
+  background-color: var(--color-gray-50);
+}
+
+/* =====================================================
+   INSURANCE GRID
+   ===================================================== */
+
+.insurance-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-8);
+}
+
+/* =====================================================
+   INSURANCE ITEM
+   ===================================================== */
+
+.insurance-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  background: var(--color-white);
+  padding: var(--spacing-3) var(--spacing-4);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-gray-200);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-gray-700);
+  transition: all var(--transition-fast);
+  cursor: default;
+}
+
+.insurance-item:hover {
+  border-color: var(--color-orange);
+  background: linear-gradient(135deg, rgba(212, 98, 71, 0.05), rgba(212, 98, 71, 0.02));
+}
+
+.insurance-icon {
+  color: var(--color-navy);
+  flex-shrink: 0;
+}
+
+/* =====================================================
+   INSURANCE NOTE
+   ===================================================== */
+
+.insurance-note {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+  background: linear-gradient(135deg, rgba(52, 49, 106, 0.05), rgba(52, 49, 106, 0.02));
+  border: 1px solid rgba(52, 49, 106, 0.1);
+  padding: var(--spacing-4);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-8);
+}
+
+.insurance-note svg {
+  color: var(--color-navy);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.insurance-note p {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-gray-600);
+}
+
+.insurance-note strong {
+  color: var(--color-navy);
+}
+
+/* =====================================================
+   PARTICULAR SECTION
+   ===================================================== */
+
+.insurance-particular {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-6);
+  background: linear-gradient(135deg, var(--color-orange), var(--color-orange-light));
+  padding: var(--spacing-8);
+  border-radius: var(--radius-xl);
+}
+
+.particular-content h3 {
+  font-size: var(--text-xl);
+  color: var(--color-white);
+  margin-bottom: var(--spacing-2);
+}
+
+.particular-content p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.insurance-particular .btn {
+  background: var(--color-white);
+  color: var(--color-orange);
+  flex-shrink: 0;
+}
+
+.insurance-particular .btn:hover {
+  background: var(--color-gray-100);
+  transform: translateY(-2px);
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 768px) {
+  .insurance-particular {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .insurance-particular .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .insurance-item {
+    font-size: var(--text-xs);
+    padding: var(--spacing-2) var(--spacing-3);
+  }
+}
+

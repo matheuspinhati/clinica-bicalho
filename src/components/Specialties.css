@@ -1,0 +1,144 @@
+/* =====================================================
+   SPECIALTIES SECTION
+   ===================================================== */
+
+.specialties {
+  position: relative;
+}
+
+.section-subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-gray-600);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* =====================================================
+   SEARCH BAR
+   ===================================================== */
+
+.specialties-search {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto var(--spacing-10);
+}
+
+.search-icon {
+  position: absolute;
+  left: var(--spacing-4);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-gray-400);
+}
+
+.search-input {
+  width: 100%;
+  padding: var(--spacing-4) var(--spacing-4) var(--spacing-4) var(--spacing-12);
+  font-size: var(--text-base);
+  font-family: var(--font-family);
+  border: 2px solid var(--color-gray-200);
+  border-radius: var(--radius-full);
+  background: var(--color-white);
+  transition: all var(--transition-fast);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--color-orange);
+  box-shadow: 0 0 0 4px rgba(212, 98, 71, 0.1);
+}
+
+.search-input::placeholder {
+  color: var(--color-gray-400);
+}
+
+/* =====================================================
+   SPECIALTIES GRID
+   ===================================================== */
+
+.specialties-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-4);
+}
+
+/* =====================================================
+   SPECIALTY CARD
+   ===================================================== */
+
+.specialty-card {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  background: var(--color-white);
+  padding: var(--spacing-4) var(--spacing-5);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-gray-200);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.specialty-card:hover {
+  border-color: var(--color-orange);
+  box-shadow: var(--shadow-md);
+  background: linear-gradient(135deg, rgba(212, 98, 71, 0.02), rgba(212, 98, 71, 0.05));
+}
+
+.specialty-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.specialty-name {
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  color: var(--color-gray-700);
+}
+
+/* =====================================================
+   NO RESULTS
+   ===================================================== */
+
+.no-results {
+  text-align: center;
+  padding: var(--spacing-10);
+  color: var(--color-gray-500);
+}
+
+/* =====================================================
+   CTA
+   ===================================================== */
+
+.specialties-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-12);
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 1024px) {
+  .specialties-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .specialties-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .specialties-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .specialty-card {
+    padding: var(--spacing-3) var(--spacing-4);
+  }
+}
+

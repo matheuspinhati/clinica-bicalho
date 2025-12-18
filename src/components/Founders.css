@@ -1,0 +1,155 @@
+/* =====================================================
+   FOUNDERS SECTION - Compact Version
+   ===================================================== */
+
+.founders {
+  background: linear-gradient(180deg, var(--color-gray-50) 0%, var(--color-white) 100%);
+  padding: var(--spacing-16) 0;
+}
+
+/* =====================================================
+   FOUNDERS WRAPPER
+   ===================================================== */
+
+.founders-wrapper {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--spacing-10);
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* =====================================================
+   FOUNDERS IMAGE
+   ===================================================== */
+
+.founders-image-side {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.founders-image-side img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
+}
+
+/* =====================================================
+   FOUNDERS CONTENT
+   ===================================================== */
+
+.founders-content-side {
+  display: flex;
+  flex-direction: column;
+}
+
+.founders-label {
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  color: var(--color-orange);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-2);
+}
+
+.founders-title {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-navy);
+  margin-bottom: var(--spacing-3);
+}
+
+.founders-intro {
+  font-size: var(--text-base);
+  color: var(--color-gray-600);
+  margin-bottom: var(--spacing-6);
+  line-height: 1.6;
+}
+
+/* =====================================================
+   FOUNDERS LIST
+   ===================================================== */
+
+.founders-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-5);
+}
+
+.founder-item {
+  padding: var(--spacing-4);
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border-left: 3px solid var(--color-orange);
+  box-shadow: var(--shadow-sm);
+}
+
+.founder-name {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--color-navy);
+  margin-bottom: var(--spacing-1);
+}
+
+.founder-role {
+  display: block;
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  color: var(--color-orange);
+  margin-bottom: var(--spacing-2);
+}
+
+.founder-bio {
+  font-size: var(--text-sm);
+  color: var(--color-gray-600);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 768px) {
+  .founders-wrapper {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+    text-align: center;
+  }
+
+  .founders-image-side {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .founder-item {
+    text-align: left;
+  }
+
+  .founders-title {
+    font-size: var(--text-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .founders {
+    padding: var(--spacing-12) 0;
+  }
+
+  .founders-image-side {
+    max-width: 160px;
+  }
+
+  .founder-item {
+    padding: var(--spacing-3);
+  }
+
+  .founder-name {
+    font-size: var(--text-base);
+  }
+}
