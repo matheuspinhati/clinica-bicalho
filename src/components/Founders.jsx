@@ -30,7 +30,7 @@ const Founders = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <img src="/founders.jpg" alt="Dra. Andreia Bicalho e Dr. Saul Moraes" />
+            <img src="/founders.jpg" alt="Dra. Andreia Bicalho e Dr. Saul Moraes - Fundadores da Clínica Bicalho" loading="lazy" />
           </motion.div>
 
           <motion.div

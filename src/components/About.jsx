@@ -81,7 +81,7 @@ const About = () => {
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                <img src="/fachada.jpg" alt="Fachada - Clínica Bicalho" />
+                <img src="/fachada.jpg" alt="Fachada da Clínica Bicalho em Uberlândia - Centro Médico Multiespecialidades" loading="lazy" />
                 <div className="about-image-overlay">
                   <span>Nossa clínica em Uberlândia</span>
                 </div>
@@ -94,7 +94,7 @@ const About = () => {
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.4 }}
                 >
-                  <img src="/hall.jpg" alt="Sala de espera - Clínica Bicalho" />
+                  <img src="/hall.jpg" alt="Sala de espera acolhedora da Clínica Bicalho" loading="lazy" />
                 </motion.div>
                 <motion.div 
                   className="about-image-small"
@@ -102,7 +102,7 @@ const About = () => {
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.5 }}
                 >
-                  <img src="/hall2.jpg" alt="Recepção - Clínica Bicalho" />
+                  <img src="/hall2.jpg" alt="Recepção moderna da Clínica Bicalho" loading="lazy" />
                 </motion.div>
               </div>
             </div>

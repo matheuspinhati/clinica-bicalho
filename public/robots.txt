@@ -1,0 +1,16 @@
+# Robots.txt for Clínica Bicalho
+# https://clinicabicalho.com.br
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://clinicabicalho.com.br/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Disallow admin/internal paths (if any)
+Disallow: /api/
+Disallow: /_
+
