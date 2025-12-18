@@ -97,8 +97,11 @@ const Specialties = () => {
           animate={isInView ? "visible" : "hidden"}
         >
           {filteredSpecialties.map((specialty, index) => (
-            <motion.div
+            <motion.a
               key={index}
+              href="https://app.clinicando.med.br/agendamento?t=c&i=OFc4NjRMd1ZVOERDcHN6OG12Sklydz09&utm_source=website"
+              target="_blank"
+              rel="noopener noreferrer"
               className="specialty-card"
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
@@ -106,7 +109,7 @@ const Specialties = () => {
             >
               <span className="specialty-icon">{specialty.icon}</span>
               <span className="specialty-name">{specialty.name}</span>
-            </motion.div>
+            </motion.a>
           ))}
         </motion.div>
 
