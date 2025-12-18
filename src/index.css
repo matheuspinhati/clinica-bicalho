@@ -104,6 +104,9 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-white);
+  /* Prevent iOS overscroll bounce showing wrong color */
+  overscroll-behavior: none;
 }
 
 body {
@@ -114,6 +117,9 @@ body {
   color: var(--color-gray-800);
   background-color: var(--color-white);
   overflow-x: hidden;
+  /* Prevent iOS rubber-band scrolling issues */
+  overscroll-behavior-y: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 img, video {
