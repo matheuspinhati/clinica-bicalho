@@ -34,9 +34,24 @@
   box-shadow: var(--shadow-lg);
 }
 
-.value-icon {
-  font-size: 3rem;
-  margin-bottom: var(--spacing-4);
+.value-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--spacing-4);
+  background: linear-gradient(135deg, rgba(212, 98, 71, 0.1), rgba(52, 49, 106, 0.1));
+  border-radius: var(--radius-xl);
+  color: var(--color-orange);
+  transition: all var(--transition-base);
+}
+
+.value-card:hover .value-icon-wrapper {
+  background: linear-gradient(135deg, var(--color-orange), var(--color-orange-light));
+  color: var(--color-white);
+  box-shadow: 0 8px 20px rgba(212, 98, 71, 0.25);
+  transform: scale(1.05);
 }
 
 .value-title {

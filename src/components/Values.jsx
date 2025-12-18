@@ -1,26 +1,27 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { Handshake, Heart, ShieldCheck, Users } from 'lucide-react';
 import './Values.css';
 
 const values = [
   {
-    icon: '🤝',
+    icon: Handshake,
     title: 'Respeito',
     description: 'Tratamos cada pessoa com dignidade, consideração e empatia, valorizando sua individualidade e necessidades.'
   },
   {
-    icon: '💙',
+    icon: Heart,
     title: 'Gentileza',
     description: 'Acreditamos que um atendimento gentil faz toda diferença na experiência de cuidado com a saúde.'
   },
   {
-    icon: '☮️',
+    icon: ShieldCheck,
     title: 'Paz e harmonia',
     description: 'Mantemos um ambiente tranquilo e acolhedor, propício para o bem-estar de todos.'
   },
   {
-    icon: '🌟',
+    icon: Users,
     title: 'Bom relacionamento',
     description: 'Cultivamos relações saudáveis e transparentes com pacientes, profissionais e colaboradores.'
   }
@@ -73,18 +74,23 @@ const Values = () => {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          {values.map((value, index) => (
-            <motion.div
-              key={index}
-              className="value-card"
-              variants={itemVariants}
-              whileHover={{ scale: 1.02 }}
-            >
-              <div className="value-icon">{value.icon}</div>
-              <h3 className="value-title">{value.title}</h3>
-              <p className="value-description">{value.description}</p>
-            </motion.div>
-          ))}
+          {values.map((value, index) => {
+            const IconComponent = value.icon;
+            return (
+              <motion.div
+                key={index}
+                className="value-card"
+                variants={itemVariants}
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="value-icon-wrapper">
+                  <IconComponent size={32} strokeWidth={1.5} />
+                </div>
+                <h3 className="value-title">{value.title}</h3>
+                <p className="value-description">{value.description}</p>
+              </motion.div>
+            );
+          })}
         </motion.div>
 
         <motion.div
@@ -107,4 +113,3 @@ const Values = () => {
 };
 
 export default Values;
-
