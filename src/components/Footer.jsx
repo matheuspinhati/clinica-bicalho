@@ -115,8 +115,8 @@ const Footer = () => {
             <p>
               © {currentYear} Clínica Bicalho - Todos os direitos reservados
             </p>
-            <p className="footer-company-info">
-              CLINICA BICALHO SERVICOS MEDICOS LTDA - EPP - CNPJ 43.134.525/0001-22
+            <p className="footer-company-info uppercase">
+              Bicalho Assessoria Médica Ltda Me - CNPJ 21.067.383/0001-95
             </p>
           </div>
           <p className="footer-made">

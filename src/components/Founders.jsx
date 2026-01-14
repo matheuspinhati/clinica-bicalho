@@ -12,7 +12,7 @@ const founders = [
   {
     name: 'Dr. Saul Moraes',
     role: 'Cofundador e Diretor Administrativo',
-    bio: 'Formado pela Universidade Federal de Minas Gerais, Saul tem dedicado sua carreira à cardiologia preventiva e ao cuidado integral do paciente, unindo excelência médica e gestão humanizada.'
+    bio: 'Saul Moraes é formado em Administração pela Faculdade Politécnica e atua como gestor da Clínica Bicalho, sendo responsável pela administração, pelo financeiro e pelo planejamento estratégico das unidades.'
   }
 ];
 
